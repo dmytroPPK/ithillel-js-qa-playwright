@@ -31,14 +31,15 @@ export default defineConfig({
     httpCredentials: {
       username: 'guest',
       password: 'welcome2qauto',
-    }
+    },
+    browserName:"chromium"
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
+      name: "homework15",
+      testDir:"tests/hw15",
     },
   ],
 });

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test":"playwright test --project=homework15",
+    "test:head":"playwright test --project=homework15 --headed"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
