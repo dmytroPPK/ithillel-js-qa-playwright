@@ -41,5 +41,9 @@ export default defineConfig({
       name: "homework15",
       testDir:"tests/hw15",
     },
+    {
+      name: "homework16",
+      testDir:"tests/hw16",
+    },
   ],
 });

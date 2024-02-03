@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"playwright test --project=homework15",
-    "test:head":"playwright test --project=homework15 --headed"
+    "test":"playwright test --project=homework16",
+    "test:head":"playwright test --project=homework16 --headed"
   },
   "keywords": [],
   "author": "",
