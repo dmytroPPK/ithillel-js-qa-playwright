@@ -1,8 +1,15 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
-import dotenv from 'dotenv'
 
-dotenv.config({path:`./env/.env.${process.env.APP_ENV}`})
+/**
+ * Read environment variables from file.
+ * https://github.com/motdotla/dotenv
+ */
+// require('dotenv').config();
+
+/**
+ * @see https://playwright.dev/docs/test-configuration
+ */
 
 export default defineConfig({
   testDir: "./tests",
@@ -18,13 +25,13 @@ export default defineConfig({
     timeout:10_000
   },
   use: {
-    baseURL: process.env.BASE_URL || '',
+    baseURL: "https://qauto.forstudy.space",
     trace: "on",
     actionTimeout:10_000,
     navigationTimeout:10_000,
     httpCredentials: {
-      username: process.env.USER_LOGIN || '',
-      password: process.env.USER_PASS || '',
+      username: 'guest',
+      password: 'welcome2qauto',
     },
     browserName:"chromium"
   },

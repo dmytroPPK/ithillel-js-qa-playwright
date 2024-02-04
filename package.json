@@ -4,14 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test":"playwright test --project=homework16",
-    "test:head":"playwright test --project=homework16 --headed"
+    "test":"playwright test --project=homework16 --config=default-playwright.config.mjs",
+    "test:dev": "cross-env APP_ENV=dev playwright test --project=homework16",
+    "test:dev:head": "npm run test:dev -- --headed",
+    "test:stage": "cross-env APP_ENV=stage playwright test --project=homework16",
+    "test:stage:head": "npm run test:stage -- --headed"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.40.1",
-    "@types/node": "^20.11.0"
+    "@types/node": "^20.11.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.1"
   }
 }
