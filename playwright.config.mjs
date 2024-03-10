@@ -12,7 +12,7 @@ export default defineConfig({
   workers: "50%",
   forbidOnly: false,
   retries: 0,
-  reporter: "html",
+  reporter: [['html', { open: 'never' }],['list']],
   timeout:45_000,
   expect:{
     timeout:10_000
@@ -38,6 +38,19 @@ export default defineConfig({
     {
       name: "homework16",
       testDir:"tests/hw16",
+    },
+    {
+      name: "homework22",
+      testDir:"tests/hw22",
+      use: {
+        extraHTTPHeaders: { Cookie: process.env.AUTH_SID || '' },
+      },
+      dependencies:["api_login"],
+    },
+    {
+      name: "api_login",
+      testDir:"./setup",
+      testMatch:"api_login.mjs",
     },
   ],
 });
