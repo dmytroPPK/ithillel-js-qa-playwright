@@ -1,0 +1,16 @@
+version: '3'
+services:
+  test-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'hw23-docker'
+    environment:
+      - ENV BASE_URL=https://qauto.forstudy.space
+      - ENV USER_LOGIN=guest
+      - ENV USER_PASS=welcome2qauto
+      - ENV API_URL=https://qauto.forstudy.space/api
+      - ENV API_USER_EMAIL=aqa-testuser123@test.com
+      - ENV API_USER_PASS=aqaUserTest123
+    volumes:
+      - ./playwright-report:/test-app/playwright-report
