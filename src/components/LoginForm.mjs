@@ -1,5 +1,6 @@
 import {BaseComponent} from './BaseComponents.mjs';
 import { SignUpForm } from './SignUpForm.mjs';
+import { GaragePage } from '../pages/GaragePage.mjs';
 
 export class LoginForm extends BaseComponent {
 	constructor(pwPage) {
@@ -13,6 +14,17 @@ export class LoginForm extends BaseComponent {
 	async openSignUpForm() {
 		await this.signUpLink.click();
 		return new SignUpForm(this.page);
+
+	}
+	async loginWithCredentials(email, password){
+		await this.fill(email,password)
+		await this.loginBtn.click()
+		return new GaragePage(this.page)
+	}
+
+	async fill(email, password){
+		await this.emailInput.fill(email)
+		await this.passwdInput.fill(password)
 	}
 
 

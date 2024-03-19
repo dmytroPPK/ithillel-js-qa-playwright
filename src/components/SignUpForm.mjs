@@ -1,5 +1,4 @@
 import {BaseComponent} from './BaseComponents.mjs';
-import {UserPage} from '../pages/UserPage.mjs'
 
 export class SignUpForm extends BaseComponent {
 	constructor(pwPage) {
