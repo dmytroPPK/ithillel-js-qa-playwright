@@ -12,7 +12,7 @@ export default defineConfig({
   workers: "50%",
   forbidOnly: false,
   retries: 0,
-  reporter: [['html', { open: 'always' }]],
+  reporter: [['html', { open: 'never' }], ['list']],
   timeout:45_000,
   expect:{
     timeout:10_000
@@ -51,6 +51,11 @@ export default defineConfig({
       name: "login",
       testDir:"setup",
       testMatch:"login.setup.mjs"
+    },
+    {
+      name: "homework19",
+      testDir:"tests/hw19",
+      dependencies:["login"]
     },
 
   ],

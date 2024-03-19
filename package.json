@@ -10,7 +10,9 @@
     "test:stage": "cross-env APP_ENV=stage playwright test --project=homework16",
     "test:stage:head": "npm run test:stage -- --headed",
     "test:hw18":"cross-env APP_ENV=dev playwright test --project=homework18",
-    "test:hw18:head": "npm run test:hw18 -- --headed"
+    "test:hw18:head": "npm run test:hw18 -- --headed",
+    "test:hw19":"cross-env APP_ENV=dev playwright test --project=homework19",
+    "test:hw19:head": "npm run test:hw19 -- --headed"
   },
   "keywords": [],
   "author": "",

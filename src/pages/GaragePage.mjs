@@ -1,6 +1,7 @@
 import { BasePage } from "./BasePage.mjs";
 import { Header } from "../components/Header.mjs";
-import {FuelExpencesPage} from './FuelExpences.mjs'
+import {FuelExpencesPage} from './FuelExpences.mjs';
+import {UserProfilePage} from './UserProfilePage.mjs';
 import { AddCarPopup } from '../components/AddCarPopUp.mjs';
 import { CarList } from '../components/CarList.mjs';
 
@@ -32,6 +33,10 @@ export class GaragePage extends BasePage{
 
     getFuelPage(){
         return new FuelExpencesPage(this.page)
+    }
+
+    getUserProfilePage(){
+        return new UserProfilePage(this.page);
     }
 
     async openAddCarPopup() {
